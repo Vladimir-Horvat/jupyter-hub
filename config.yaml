@@ -1,0 +1,18 @@
+proxy:
+  secretToken: "892374982374jsdfj8"
+  service:
+    type: NodePort
+    nodePorts:
+      http: 30080
+      https: 30443
+
+hub:
+  db:
+    type: sqlite-memory
+
+singleuser:
+  image:
+    name: jupyter/all-spark-notebook
+    tag: dc9744740e12
+  storage:
+    type: sqlite-memory
